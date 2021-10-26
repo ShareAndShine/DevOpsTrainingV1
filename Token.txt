@@ -1,0 +1,42 @@
+openssl genrsa -des3 -passout pass:SomePassword -out server.pass.key 2048
+openssl rsa -passin pass:SomePassword -in server.pass.key -out server.key
+openssl req -new -key server.key -out server.csr
+openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out server.crt
+
+
+Github Token
+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
+
+
+AZ Token
+tsb2wmg6egcuyt5nyw6y6ucmmeh3q5pl6lkgaqngryfutyijb2rq
+
+
+Connected app:
+client Id - 3MVG9fe4g9fhX0E68Exca51RPTXLnW3SytSOCihik0wP9c9LptL2OCrZCM0MI4y7B.kvrUev9G8piKtRjy582
+
+sfdx auth:jwt:grant --clientid 3MVG9fe4g9fhX0E68Exca51RPTXLnW3SytSOCihik0wP9c9LptL2OCrZCM0MI4y7B.kvrUev9G8piKtRjy582 --jwtkeyfile cert/server.key  --username shyamsundar_s@hcl.com.devops --instanceurl https://brave-wolf-ias2ie-dev-ed.my.salesforce.com --setalias brave-wolf
+
+
+
+http://localhost:1717/OauthRedirect
+
+
+Training DevOps:
+Consumer Key (client Id) : 3MVG9fe4g9fhX0E68Exca51RPTVkeKL0wZvjDmZ6oND060mcRDFoPaWKIwTs88VYOIVJkrGJlrHq1_.lSDRa0
+url: https://brave-wolf-ias2ie-dev-ed.my.salesforce.com 
+key file: cert/server.key
+
+
+Authorize Org:
+==============
+
+sfdx auth:jwt:grant --clientid 3MVG9fe4g9fhX0E68Exca51RPTVkeKL0wZvjDmZ6oND060mcRDFoPaWKIwTs88VYOIVJkrGJlrHq1_.lSDRa0 --jwtkeyfile cert/server.key  --username shyamsundar_s@hcl.com.devops --instanceurl https://brave-wolf-ias2ie-dev-ed.my.salesforce.com --setalias brave-wolf
+
+
+sfdx auth:jwt:grant --clientid 3MVG9fe4g9fhX0E68Exca51RPTVkeKL0wZvjDmZ6oND060mcRDFoPaWKIwTs88VYOIVJkrGJlrHq1_.lSDRa0 --jwtkeyfile $(bravewolf.secureFilePath) --username shyamsundar_s@hcl.com.devops --instanceurl https://brave-wolf-ias2ie-dev-ed.my.salesforce.com --setalias brave-wolf
+
+
+$(TeamProject)_$(Build.DefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+
+
