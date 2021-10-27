@@ -1,5 +1,5 @@
 {
-  "orgName": "Demo company",
+  "orgName": "SITOrg",
   "edition": "Developer",
   "features": ["EnableSetPasswordInApi"],
   "settings": {

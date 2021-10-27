@@ -40,3 +40,6 @@ sfdx auth:jwt:grant --clientid 3MVG9fe4g9fhX0E68Exca51RPTVkeKL0wZvjDmZ6oND060mcR
 $(TeamProject)_$(Build.DefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
 
 
+SIT Org: 3MVG9rnryk9FxFMWQlcnECE5MMfjWUZxxsEisAY7V26k_._LozCysOzj5bVK2fjLreBOKUoiiRr0PPQT.0pWd
+SIT ORg auth
+sfdx auth:jwt:grant --clientid 3MVG9rnryk9FxFMWQlcnECE5MMfjWUZxxsEisAY7V26k_._LozCysOzj5bVK2fjLreBOKUoiiRr0PPQT.0pWd --jwtkeyfile cert/sitorg/sitorgserver.key  --username test-g0iaym6s0uz4@example.com --instanceurl https://platform-java-7556-dev-ed.cs75.my.salesforce.com --setalias SITOrg
